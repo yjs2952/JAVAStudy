@@ -12,6 +12,8 @@ public class Cache {
 
             if (queue.size() != 0 && queue.contains(target)) {
                 runTime++;
+
+
             } else {
                 runTime += 5;
                 if (cacheSize != 0) {
@@ -29,7 +31,7 @@ public class Cache {
     }
 
     public static void main(String[] args) {
-        result(3, new String[]{"Jeju", "Seoul", "Seoul", "NewYork", "LA", "Jeju", "Pangyo", "Seoul", "NewYork", "LA"});
+        result(3, new String[]{"Jeju", "Seoul", "Pangyo", "NewYork", "LA", "Jeju", "Pangyo", "Seoul", "NewYork", "LA"});
         result(3, new String[]{"Jeju", "Pangyo", "Seoul", "Jeju", "Pangyo", "Seoul", "Jeju", "Pangyo", "Seoul"});
         result(2, new String[]{"Jeju", "Pangyo", "Seoul", "NewYork", "LA", "SanFrancisco", "Seoul", "Rome", "Paris", "Jeju", "NewYork", "Rome"});
         result(5, new String[]{"Jeju", "Pangyo", "Seoul", "NewYork", "LA", "SanFrancisco", "Seoul", "Rome", "Paris", "Jeju", "NewYork", "Rome"});
