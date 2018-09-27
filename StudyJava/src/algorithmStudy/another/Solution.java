@@ -24,8 +24,8 @@ public class Solution {
 }
 
     public static void main(String[] args) {
-        int[] progresses = {40, 93, 30, 55, 60, 65};
-        int[] speed = {60, 1, 30, 5 , 10, 7};
+        int[] progresses = {93, 30, 55};
+        int[] speed = {1, 30, 5};
         int[] returnArry = null;
 
         returnArry = solution(progresses, speed);
