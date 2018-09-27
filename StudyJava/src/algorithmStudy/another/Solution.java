@@ -2,7 +2,7 @@ package algorithmStudy.another;
 
 public class Solution {
     public static int[] solution(int[] progresses, int[] speeds) {
-        int[] answer = {};
+        int[] answer = new int[10];
         int day = 0;
         int rday = 0;
         int index = 0;
