@@ -1,7 +1,7 @@
 package algorithmStudy.doItJAVA.ch05;
 
 public class GCD {
-    public static int gcd(int x, int y) {
+    static int gcd(int x, int y) {
 
         if (y == 0) {
             return x;
@@ -10,7 +10,7 @@ public class GCD {
         }
     }
 
-    public static int gcdLoop(int a, int b) {
+    static int gcdLoop(int a, int b) {
         while (b > 0) {
             int temp = a;
             a = b;
@@ -19,7 +19,7 @@ public class GCD {
         return a;
     }
 
-    public static int gcdArray(int[] a) {
+    static int gcdArray(int[] a) {
         int gcd = gcdLoop(a[0], a[1]);
         for (int i = 2; i < a.length; i++) {
             gcd = gcd(gcd, a[i]);
