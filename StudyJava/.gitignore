@@ -83,4 +83,4 @@ local.properties
 ### SVN template
 .svn/
 
-.idea/workspace.xml
+.idea/

@@ -27,6 +27,16 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
+
+            <!-- webapp 폴더 변경. http://antop.tistory.com/149 -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-war-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <warSourceDirectory>webapp</warSourceDirectory>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
