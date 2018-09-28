@@ -3,14 +3,14 @@ package algorithmStudy.doItJAVA.ch05;
 public class GCD {
     public static int gcd(int x, int y) {
 
-        if (x % y == 0) {
-            return y;
+        if (y == 0) {
+            return x;
         } else {
             return gcd(y, x % y);
         }
     }
 
-    public static int gcdLoop(int a, int b){
+    public static int gcdLoop(int a, int b) {
         while (b > 0) {
             int temp = a;
             a = b;
@@ -28,10 +28,10 @@ public class GCD {
     }
 
     public static void main(String[] args) {
-        System.out.println(gcd(6, 21));
+        System.out.println(gcd(180, 92));
         System.out.println(gcdLoop(6, 21));
 
-        int[] gcdArray = new int[]{18, 24, 30, 22, 990};
+        int[] gcdArray = new int[]{18, 24, 30, 36, 96};
         //long start = System.nanoTime();
         System.out.println(gcdArray(gcdArray));
         //long end = System.nanoTime();
