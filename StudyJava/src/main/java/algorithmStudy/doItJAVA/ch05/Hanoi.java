@@ -20,7 +20,7 @@ public class Hanoi {
 
         System.out.println("하노이의 탑");
         System.out.print("원반 개수 : ");
-        int n = sc.nextByte();
+        int n = sc.nextInt();
 
         move(n, 1, 3);
     }
