@@ -44,6 +44,6 @@ public class Q7_1 {
     }
 
     public static void main(String[] args) {
-        move(3, 'A', 'B', 'C');
+        move(4, 'A', 'B', 'C');
     }
 }
