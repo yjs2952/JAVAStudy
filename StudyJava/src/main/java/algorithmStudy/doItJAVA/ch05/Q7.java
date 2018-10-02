@@ -24,8 +24,8 @@ public class Q7 {
                 x = s1.pop();
                 y = s1.pop();
                 //move(num - 1, 6 - x - y, y);
-                num = num - 1;
                 System.out.println("원반[" + num + "]을 " + x + " 기둥에서 " + y + " 기둥으로 옮김");
+                num = num - 1;
                 x = 6 - x - y;
                 //num = num - 1;
                 continue;
