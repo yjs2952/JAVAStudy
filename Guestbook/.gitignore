@@ -96,3 +96,7 @@ fabric.properties
 # Editor-based Rest Client
 .idea/httpRequests
 
+.idea/artifacts/
+.idea/encodings.xml
+META-INF/
+guestbook.iml
