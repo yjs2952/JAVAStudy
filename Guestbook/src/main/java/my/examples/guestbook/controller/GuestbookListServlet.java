@@ -13,7 +13,7 @@ public class GuestbookListServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/list");
+        RequestDispatcher dispatcher = req.getRequestDispatcher("/WEB-INF/views/list.jsp");
         dispatcher.forward(req, resp);
 
     }
