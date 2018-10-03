@@ -1,4 +1,4 @@
-package my.examples.guestbook.controller;
+package my.examples.guestbook.servlet;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
