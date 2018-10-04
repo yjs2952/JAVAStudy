@@ -1,5 +1,8 @@
 package my.examples.guestbook.servlet;
 
+import my.examples.guestbook.dao.GuestBookDAOImpl;
+import my.examples.guestbook.dao.GuestbookDAO;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,11 +22,14 @@ public class GuestbookWriteServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         req.setCharacterEncoding("utf-8");
-        String name = req.getParameter("name");
-        String title = req.getParameter("title");
-        String content = req.getParameter("content");
+        Guestbook guestbook = new Guestbook();
+        guestbook.setName(req.getParameter("name"));
+        guestbook.setContent(req.getParameter("content"));
 
-        System.out.println("name = " + name + ", title = " + title + ", content = " + content);
+        GuestbookDAO dao = new GuestBookDAOImpl();
+        int result = dao.addGuestbook(guestbook);
+        System.out.println("addGuestbook : " + result);
+        //System.out.println("name = " + name + ", title = " + title + ", content = " + content);
 
         resp.sendRedirect("/guestbook/list");
     }

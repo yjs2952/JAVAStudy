@@ -14,6 +14,7 @@
             </a>
         </div>
         <div class="contentList">
+            방문 건수 : ${requestScope.guestbookSize}
             <table class="table table-striped table-hover">
                 <colgroup>
                     <col style="width: 10%;">
@@ -23,14 +24,14 @@
                 </colgroup>
                 <thead>
                 <tr>
-                    <th class="text-center">번호</th>
+                    <th class="text-center">ID</th>
                     <th class="text-center">성명</th>
-                    <th class="text-center">제목</th>
+                    <th class="text-center">내용</th>
                     <th class="text-center">날짜</th>
                 </tr>
                 </thead>
                 <tbody>
-                <tr>
+                <%--<tr>
                     <td class="text-center">1</td>
                     <td class="text-center">홍길동</td>
                     <td>축지법 쓰는 법</td>
@@ -47,7 +48,15 @@
                     <td class="text-center">이순신</td>
                     <td>내 죽음을 적에게 알리지 마라</td>
                     <td class="text-center">2018-10-03</td>
-                </tr>
+                </tr>--%>
+                <c:forEach items="${requestScope.guestbookList}" var="guestbook">
+                    <tr>
+                        <td class="text-center">${guestbook.id}</td>
+                        <td class="text-center">${guestbook.name}</td>
+                        <td>${guestbook.content}</td>
+                        <td class="text-center">${guestbook.regate}</td>
+                    </tr>
+                </c:forEach>
                 </tbody>
             </table>
         </div>

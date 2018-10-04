@@ -16,12 +16,12 @@
                     <input type="text" class="form-control" id="name" name="name" placeholder="성명.....">
                 </div>
             </div>
-            <div class="form-group row">
+            <%--<div class="form-group row">
                 <label for="title" class="col-lg-1 col-md-6 col-form-label">제목</label>
                 <div class="col-lg-11 col-md-12">
                     <input type="text" class="form-control" id="title" name="title" placeholder="제목.....">
                 </div>
-            </div>
+            </div>--%>
             <div class="form-group row">
                 <label for="content" class="col-lg-1 col-md-6 col-form-label">내용</label>
                 <div class="col-lg-11 col-md-12">
