@@ -2,13 +2,8 @@ package my.examples.classloader;
 
 import com.google.common.reflect.ClassPath;
 
-import java.io.*;
-import java.net.URL;
-import java.net.URLClassLoader;
-import java.util.Enumeration;
+import java.io.IOException;
 import java.util.Set;
-
-import static java.lang.Thread.*;
 
 class AllClassesInJVMExtractor {
     public void findClasses() throws IOException {
@@ -29,9 +24,5 @@ class AllClassesInJVMExtractor {
             e.printStackTrace();
         }
     }
-}
-
-class test{
-
 }
 
