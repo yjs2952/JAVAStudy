@@ -13,7 +13,7 @@ import java.util.Date;
 import java.util.List;
 
 public class GuestBookDAOImpl implements GuestbookDAO{
-    private String dbUrl = "jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false&serverTimezone=UTC";
+        private String dbUrl = "jdbc:mysql://localhost:3306/mydb?autoReconnect=true&useSSL=false&serverTimezone=UTC";
     private String dbId = "root";
     private String dbPassword = "1234";
 
