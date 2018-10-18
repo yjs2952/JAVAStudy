@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="dice" class="Dice">
+        <constructor-arg name="face" value="6"/>
+    </bean>
+
+    <bean id="yoon" class="Player">
+        <constructor-arg name="dice" ref="dice"/>
+        <constructor-arg name="name" value="윤지수"/>
+    </bean>
+
+    <bean id="kim" class="Player">
+        <constructor-arg name="dice" ref="dice"/>
+        <constructor-arg name="name" value="김남환"/>
+    </bean>
+
+    <bean id="joo" class="Player">
+        <constructor-arg name="dice" ref="dice"/>
+        <constructor-arg name="name" value="주미선"/>
+    </bean>
+
+    <bean id="lee" class="Player">
+        <constructor-arg name="dice" ref="dice"/>
+        <constructor-arg name="name" value="이규민"/>
+    </bean>
+
+    <bean id="game" class="Game">
+        <property name="list">
+            <list>
+                <ref bean="joo"/>
+                <ref bean="yoon"/>
+                <ref bean="lee"/>
+                <ref bean="kim"/>
+            </list>
+        </property>
+    </bean>
+</beans>
