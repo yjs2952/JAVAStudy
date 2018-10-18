@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="jdbcUtil" class="my.examples.studentboard.util.JdbcUtil">
+        <constructor-arg name="driver" value="com.mysql.cj.jdbc.Driver"/>
+        <constructor-arg name="url" value="jdbc:mysql://localhost:3306/studentboard?autoReconnect=true&amp;useSSL=false&amp;serverTimezone=UTC"/>
+        <constructor-arg name="user" value="root"/>
+        <constructor-arg name="password" value="1234"/>
+    </bean>
+
+    <bean id="boardUI" class="my.examples.studentboard.BoardUI"/>
+
+    <bean id="mainController" class="my.examples.studentboard.controller.MainController">
+        <property name="boardUI" ref="boardUI"/>
+        <property name="studentDAO" ref="studentDao"/>
+    </bean>
+
+    <bean id="studentDao" class="my.examples.studentboard.dao.StudentDAO">
+        <property name="jdbcUtil" ref="jdbcUtil"/>
+    </bean>
+</beans>
