@@ -30,6 +30,7 @@ public class MainController {
             } else if (num == 3) {
                 flag = boardUI.end();
             }
+            System.out.println();
         }
     }
 

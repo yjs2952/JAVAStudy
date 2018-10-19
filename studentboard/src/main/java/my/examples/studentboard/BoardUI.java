@@ -15,22 +15,13 @@ public class BoardUI {
         System.out.print("선택 (1: 학생등록, 2: 학생목록 보기, 3: 종료) : ");
         int num = sc.nextInt();
 
-        if (num == 1) {
-            return num;
-        } else if (num == 2) {
-            return num;
-        } else if (num == 3) {
-            return num;
-        }
-
-        return 0;
+        return num;
     }
 
     public Student addStudent(){
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("학생 등록을 선택 하셨습니다. 다음을 입력하세요.");
         System.out.print("이름 : ");
         String name = sc.nextLine();
 
@@ -63,11 +54,13 @@ public class BoardUI {
     }
 
     public void listStudent(List<Student> list){
-        System.out.println("이름    국어 영어 수학");
-        System.out.println("---------------------");
+        System.out.println("------------------------------------");
+        System.out.printf("|%6s %6s %5s %4s\t\t|\n", "이름", "국어", "영어", "수학");
+        System.out.println("------------------------------------");
         for (Student student : list) {
-            System.out.println(student.getName()+"\t"+student.getKorScore()+"\t"+student.getEngScore()+"\t"+student.getMathScore());
+            System.out.printf("|%6s %6d %6d %6d\t\t|\n",student.getName(),student.getKorScore(),student.getEngScore(),student.getMathScore());
         }
+        System.out.println("------------------------------------");
     }
 
     public boolean end(){
