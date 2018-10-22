@@ -100,7 +100,7 @@ queryForObject(SQL, 바인딩할객체, Mapper)
 
 
 
-
+org.springframework.beans.TypeMismatchException: Failed to convert property value of type 'null' to required type 'int' for property 'readCount'; nested exception is org.springframework.core.convert.ConversionFailedException: Failed to convert from type [null] to type [int] for value 'null'; nested exception is java.lang.IllegalArgumentException: A null value cannot be assigned to a primitive type
 
 
 

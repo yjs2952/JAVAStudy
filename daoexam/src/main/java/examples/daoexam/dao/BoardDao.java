@@ -15,6 +15,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 @Repository
@@ -85,6 +86,20 @@ public class BoardDao {
             // 세번째 파라미터 : Mapper (칼럼을 DTO에 담아주기위한 규칙)
             return jdbc.queryForObject(sql, params, rowMapper);
         }catch(Exception ex){
+            return null;
+        }
+    }
+
+    public List<Board> getBoards(int start, int limit) {
+        String sql = "SELECT id, name, title, content, regdate, read_count FROM board limit :start, :limit";
+
+        try {
+            RowMapper<Board> rowMapper = BeanPropertyRowMapper.newInstance(Board.class);
+            Map<String, Integer> map = new HashMap<>();
+            map.put("start", start);
+            map.put("limit", limit);
+            return jdbc.query(sql, map, rowMapper);
+        } catch (Exception e) {
             return null;
         }
     }

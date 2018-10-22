@@ -31,7 +31,6 @@ public class BoardServiceImpl implements BoardService {
         boardDao.updateCount(id);
         // 1건 읽어오고
         Board board = boardDao.getBoard(id);
-
         return board;
     }
 
@@ -41,7 +40,9 @@ public class BoardServiceImpl implements BoardService {
     @Override
     @Transactional(readOnly = true)
     public List<Board> getBoards(int start, int limit) {
-        return null;
+        start = (start - 1) * 10;
+        List<Board> list = boardDao.getBoards(start, limit);
+        return list;
     }
 }
 

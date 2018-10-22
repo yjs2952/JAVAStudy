@@ -7,6 +7,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import java.util.Date;
+import java.util.List;
 
 public class BoardServiceSelectTest {
 
@@ -15,9 +16,13 @@ public class BoardServiceSelectTest {
 				new AnnotationConfigApplicationContext(ApplicationConfig.class);
 
 		BoardService boardService = ac.getBean(BoardService.class);
-		Board board = boardService.getBoard(1L);
+		//Board board = boardService.getBoard(1L);
+		List<Board> list = boardService.getBoards(2, 10);
 
-		System.out.println(board);
+		for (Board board : list) {
+			System.out.println(board.toString());
+		}
+		//System.out.println(board);
 	}
 
 }
