@@ -16,7 +16,7 @@ public class Baek2309 {
         return sum;
     }
 
-    static int solution(int[] arr){
+    static void solution(int[] arr){
         int sum = sum(arr);
 
         for (int i = 0; i < arr.length - 1; i++) {
@@ -24,11 +24,10 @@ public class Baek2309 {
                 if ((sum - (arr[i] + arr[j])) == 100) {
                     arr[i] = 0;
                     arr[j] = 0;
-                    return 0;
+                    return;
                 }
             }
         }
-        return 1;
     }
 
     public static void main(String[] args) {
@@ -40,7 +39,6 @@ public class Baek2309 {
         }
 
         solution(arr);
-
         Arrays.sort(arr);
 
         for (int i = 2; i < arr.length; i++) {
