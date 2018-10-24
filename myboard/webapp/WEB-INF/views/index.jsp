@@ -12,7 +12,7 @@
 <h1>Test</h1>
 <br>
 
-<a href="/boards">게시판</a><br><br>
+<a href="/boards/list">게시판</a><br><br>
 <img src="/images/github.gif">
 </body>
 </html>

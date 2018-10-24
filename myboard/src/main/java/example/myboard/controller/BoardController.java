@@ -4,14 +4,12 @@ import example.myboard.dto.Board;
 import example.myboard.service.BoardService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
 @Controller
+@RequestMapping("/boards")
 public class BoardController {
 
     private BoardService boardService;
@@ -20,48 +18,54 @@ public class BoardController {
         this.boardService = boardService;
     }
 
-    @GetMapping("/boards")
-    public String list(ModelMap modelMap, @RequestParam(name = "page") String page) {
-        if (page != null) {
-            int pageNo = Integer.parseInt(page);
-            List<Board> list = boardService.getBoards(pageNo, 10);
+    @GetMapping("/list")
+    public String list(ModelMap modelMap, Integer page) {
+        if (page == null) {
+            page = 1;
         }
 
+        List<Board> list = boardService.getBoards(page, 10);
+        modelMap.addAttribute("boards", list);
         return "list";
     }
 
-    @GetMapping("/boards/getBoard")
+    @GetMapping("/getBoard")
     public String getBoard(ModelMap modelMap, @RequestParam(name = "id") Long id){
         Board board = boardService.getBoard(id);
-        modelMap.addAttribute( board);
-        return "/boards/boardview";
+        modelMap.addAttribute(board);
+        return "boardView";
     }
 
-    @GetMapping("boards/writeForm")
+    @GetMapping("/writeForm")
     public String writeForm(){
         return "writeform";
     }
 
-    @PostMapping("boards/writeBoard")
+    @PostMapping("/writeBoard")
     public String write(@ModelAttribute Board board) {
         boardService.addBoard(board);
-        return "redirect:/boards";
+        return "redirect:/boards/list";
     }
 
-    @GetMapping("/boards/updateForm")
-    public String updateForm(){
+    @GetMapping("/updateForm")
+    public String updateForm(ModelMap modelMap, @RequestParam Long id){
+        if (id == null) {
+            return "list";
+        }
+        Board board = boardService.getBoard(id);
+        modelMap.addAttribute(board);
         return "updateForm";
     }
 
-    @PostMapping("/boards/updateBoard")
+    @PostMapping("/updateBoard")
     public String updateBoard(@ModelAttribute Board board){
         boardService.updateBoard(board);
-        return "redirect:/boards/boardView?id="+board.getId();
+        return "redirect:/boards/getBoard?id="+board.getId();
     }
 
-    @GetMapping("/boards/deleteBoard")
+    @GetMapping("/deleteBoard")
     public String deleteBoard(@RequestParam(name = "id") Long id) {
         boardService.deleteBoard(id);
-        return "redirect:/boards";
+        return "redirect:/boards/list";
     }
 }
