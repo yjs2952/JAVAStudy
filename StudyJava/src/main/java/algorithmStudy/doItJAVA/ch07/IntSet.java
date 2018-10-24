@@ -100,6 +100,7 @@ public class IntSet {
         }
     }
 
+    // Q2
     public boolean isEmpty(){
         return num == 0;
     }
@@ -115,6 +116,19 @@ public class IntSet {
             }*/
             num = 0;
         }
+    }
+
+    // Q2
+    public boolean add(IntSet s){
+
+
+        return true;
+    }
+
+    // Q3
+    public boolean isSubsetOf(IntSet s){
+
+        return true;
     }
 
     public String toString() {
