@@ -95,7 +95,7 @@ public class BinTree<K, V> {
 
     public boolean remove(K key) {
         Node<K, V> p = root;
-        Node<K, V> parent = parent = null;
+        Node<K, V> parent = null;
         boolean isLeftChild = true;
 
         while (true) {
@@ -154,7 +154,7 @@ public class BinTree<K, V> {
                 parent.right = left.left;
             }
         }
-        
+
         return true;
     }
 }
