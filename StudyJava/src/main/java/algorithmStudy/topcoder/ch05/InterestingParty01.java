@@ -13,7 +13,7 @@ public class InterestingParty01 {
             dic.put(second[i], 0);
         }
 
-        
+
         int ans = 0;
 
         return ans;
