@@ -4,7 +4,7 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 // 백준 1463
-public class Main {
+public class Baek1463 {
     public static int N, dp[];
 
     public static void main(String[] args) {
@@ -20,7 +20,7 @@ public class Main {
     public static int solution(int pos) {
         if (dp[pos] != -1) return dp[pos];
 
-        int i, min = 1000000;
+        int min = 1000000;
         if (pos % 3 == 0) min = Math.min(min, solution(pos / 3));
         if (pos % 2 == 0) min = Math.min(min, solution(pos / 2));
         min = Math.min(min, solution(pos - 1));
@@ -30,7 +30,7 @@ public class Main {
 }
 
 /*
-public class Main {
+public class Baek1463 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
