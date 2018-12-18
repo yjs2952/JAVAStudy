@@ -24,6 +24,9 @@ public class InterestingParty {
         String[] f = {"fs", "gd", "sw", "fs"};
         String[] s = {"ht", "fs", "sw", "bt"};
 
+        long start = System.nanoTime();
         System.out.println(bestInvitation(f, s));
+        long end = System.nanoTime();
+        System.out.println(end - start);
     }
 }

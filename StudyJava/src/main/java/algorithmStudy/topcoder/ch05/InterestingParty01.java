@@ -13,15 +13,27 @@ public class InterestingParty01 {
             dic.put(second[i], 0);
         }
 
+        for (int i = 0; i < first.length; i++) {
+            dic.put(first[i], dic.get(first[i]) + 1);
+            dic.put(second[i], dic.get(second[i]) + 1);
+        }
+
 
         int ans = 0;
+        for (String key : dic.keySet()) {
+            ans = Math.max(ans, dic.get(key));
+        }
 
         return ans;
     }
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        String[] f = {"fs", "gd", "sw", "fs"};
+        String[] s = {"ht", "fs", "sw", "bt"};
 
-        sc.close();
+        long start = System.nanoTime();
+        System.out.println(bestInvitation(f, s));
+        long end = System.nanoTime();
+        System.out.println(end - start);
     }
 }

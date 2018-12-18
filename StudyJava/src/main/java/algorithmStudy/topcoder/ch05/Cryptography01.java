@@ -2,24 +2,16 @@ package algorithmStudy.topcoder.ch05;
 
 import java.util.Arrays;
 
-public class Cryptography {
+public class Cryptography01 {
     public static long encrypt(int[] numbers) {
-        long ans = 0;
-
+        long ret = 1;
+        Arrays.sort(numbers);
+        numbers[0]++;
         for (int i = 0; i < numbers.length; i++) {
-            long temp = 1;
-
-            for (int j = 0; j < numbers.length; j++) {
-                if (i == j) {
-                    temp *= (numbers[j] + 1);
-                } else {
-                    temp *= numbers[j];
-                }
-            }
-            ans = Math.max(ans, temp);
+            ret *= numbers[i];
         }
 
-        return ans;
+        return ret;
     }
 
     public static void main(String[] args) {
