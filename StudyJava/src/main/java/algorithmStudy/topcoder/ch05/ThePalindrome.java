@@ -6,8 +6,8 @@ public class ThePalindrome {
 
         for (int i = s.length(); ; i++) {
             boolean ok = true;
-            for (int k = 0; k < s.length(); k++) {
-                if ((i - k - 1) < s.length() && s.charAt(i - k - 1) != s.charAt(k)) {
+            for (int j = 0; j < s.length(); j++) {
+                if (i - j - 1 < s.length() && s.charAt(j) != s.charAt(i - j - 1)) {
                     ok = false;
                     break;
                 }
@@ -17,6 +17,6 @@ public class ThePalindrome {
     }
 
     public static void main(String[] args) {
-        System.out.println(find("12345"));
+        System.out.println(find("121"));
     }
 }
