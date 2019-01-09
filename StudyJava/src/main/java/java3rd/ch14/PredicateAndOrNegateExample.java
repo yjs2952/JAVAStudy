@@ -19,8 +19,14 @@ public class PredicateAndOrNegateExample {
         result = predicateAB.test(9);
         System.out.println("9는 2와 3의 배수입니꽈? " + result);
 
+        // or()
         predicateAB = intPredicateA.or(intPredicateB);
         result = predicateAB.test(9);
         System.out.println("9는 2 혹은 3의 배수입니꽈? " + result);
+
+        // negate
+        predicateAB = intPredicateA.negate();
+        result = predicateAB.test(9);
+        System.out.println("9는 홀수 입니꽈? " + result);
     }
 }
