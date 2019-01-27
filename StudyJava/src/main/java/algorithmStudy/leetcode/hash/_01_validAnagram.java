@@ -5,13 +5,6 @@ import java.util.Arrays;
 public class _01_validAnagram {
     public static boolean isAnagram(String s, String t) {
 
-        if (s.equals("") && t.equals(""))
-            return true;
-
-        if (s.equals("") || t.equals("")) {
-            return false;
-        }
-
         char[] sArr = s.toCharArray();
         char[] tArr = t.toCharArray();
 
@@ -25,19 +18,6 @@ public class _01_validAnagram {
         for (int i = 0; i < sArr.length; i++) {
             if (sArr[i] != tArr[i]) return false;
         }
-
-        /*List<Integer> listS = s.chars().parallel().sorted().boxed().collect(Collectors.toList());
-        List<Integer> listT = t.chars().parallel().sorted().boxed().collect(Collectors.toList());
-
-        if (listS.size() != listT.size()) {
-            return false;
-        }
-
-        for (int i = 0; i < listS.size(); i++) {
-            if (listS.get(i) != listT.get(i)) {
-                return false;
-            }
-        }*/
 
         return true;
     }
