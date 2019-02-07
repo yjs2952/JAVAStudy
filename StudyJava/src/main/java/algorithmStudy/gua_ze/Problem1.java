@@ -3,18 +3,6 @@ package algorithmStudy.gua_ze;
 import java.util.Scanner;
 
 public class Problem1 {
-    /*public static int getNextInteger(int n) {
-
-        while (true) {
-            n++;
-
-            if (!String.valueOf(n).contains("0")) {
-                break;
-            }
-        }
-
-        return n;
-    }*/
 
     public static void getNextInteger(String input) {
 
