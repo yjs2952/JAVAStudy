@@ -11,31 +11,27 @@ public class ExecuteAround {
 
         System.out.println("---");
 
-		String oneLine = processFile((BufferedReader b) -> b.readLine());
+		String oneLine = processFile(BufferedReader::readLine);
 		System.out.println(oneLine);
 
 		String twoLines = processFile((BufferedReader b) -> b.readLine() + b.readLine());
 		System.out.println(twoLines);
-
 	}
 
-    public static String processFileLimited() throws IOException {
+    private static String processFileLimited() throws IOException {
         try (BufferedReader br =
-                     new BufferedReader(new FileReader("lambdasinaction/chap3/data.txt"))) {
+                     new BufferedReader(new FileReader(new File("lambdasinaction/chap5/data.txt")))) {
             return br.readLine();
         }
     }
 
-
-	public static String processFile(BufferedReaderProcessor p) throws IOException {
-		try(BufferedReader br = new BufferedReader(new FileReader("lambdasinaction/chap3/data.txt"))){
+	private static String processFile(BufferedReaderProcessor p) throws IOException {
+		try(BufferedReader br = new BufferedReader(new FileReader("lambdasinaction/chap5/data.txt"))){
 			return p.process(br);
 		}
-
 	}
 
 	public interface BufferedReaderProcessor{
-		public String process(BufferedReader b) throws IOException;
-
+		String process(BufferedReader b) throws IOException;
 	}
 }
