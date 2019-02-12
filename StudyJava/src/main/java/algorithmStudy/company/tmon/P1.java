@@ -1,6 +1,5 @@
-package algorithmStudy.tmon;
+package algorithmStudy.company.tmon;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class P1 {

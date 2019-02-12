@@ -1,4 +1,4 @@
-package algorithmStudy.tmon;
+package algorithmStudy.company.tmon;
 
 public class P2 {
 

@@ -1,4 +1,4 @@
-package algorithmStudy.gua_ze;
+package algorithmStudy.company.gua_ze;
 
 import java.util.LinkedList;
 import java.util.Queue;

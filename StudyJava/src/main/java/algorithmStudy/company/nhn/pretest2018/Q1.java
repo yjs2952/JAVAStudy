@@ -1,4 +1,4 @@
-package algorithmStudy.nhn.pretest2018;
+package algorithmStudy.company.nhn.pretest2018;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

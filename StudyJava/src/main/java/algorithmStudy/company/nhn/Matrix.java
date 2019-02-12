@@ -1,4 +1,4 @@
-package algorithmStudy.nhn;
+package algorithmStudy.company.nhn;
 
 import java.util.Scanner;
 
