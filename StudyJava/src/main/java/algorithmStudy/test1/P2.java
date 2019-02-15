@@ -1,11 +1,11 @@
-package algorithmStudy.test;
+package algorithmStudy.test1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 
 public class P2 {
 
-    public static final int[] arr = new int[100000000];
+    public static final int[] arr = new int[1000000];
 
     public static void main(String[] args) throws java.lang.Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));

@@ -67,7 +67,6 @@ public class P5 {
         System.out.println(list5.toString());
 
         System.out.println(transactions.stream().max(Comparator.comparing(Transaction::getValue)));
-
         System.out.println(transactions.stream().min(Comparator.comparing(Transaction::getValue)));
     }
 }

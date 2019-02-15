@@ -7,6 +7,11 @@ public class P2 {
     private static int solution(int[] A) {
 
         int len = A.length;
+
+        if (len == 0) {
+            return 0;
+        }
+
         boolean[] flag = new boolean[len];
         List<Integer> list = new ArrayList<>();
         int max = 0;

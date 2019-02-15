@@ -1,4 +1,4 @@
-package algorithmStudy.test;
+package algorithmStudy.test1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -21,7 +21,10 @@ public class P6 {
             }
         }
 
-        if (flag) System.out.println("YES");
-        else System.out.println("NO");
+        if (flag) {
+            System.out.println("YES");
+        } else {
+            System.out.println("NO");
+        }
     }
 }

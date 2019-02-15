@@ -1,4 +1,4 @@
-package algorithmStudy.test;
+package algorithmStudy.test1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
