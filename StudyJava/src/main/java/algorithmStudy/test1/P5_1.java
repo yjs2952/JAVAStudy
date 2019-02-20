@@ -47,7 +47,6 @@ public class P5_1 {
             num2[i] = Integer.parseInt(br.readLine());
 
         solution(num1, num2, size1, size2);
-
     }
 }
 

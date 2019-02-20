@@ -3,8 +3,7 @@ package algorithmStudy.company.tmon;
 import java.util.Scanner;
 
 public class P1 {
-
-    static String solution(int num, int n) {
+    private static String solution(int num, int n) {
         String t = "0123456789ABCDEF";
         int q = num / n;
         int r = num % n;
@@ -14,7 +13,7 @@ public class P1 {
             return solution(q, n) + t.charAt(r);
     }
 
-    static String method(int num, int n){
+    /*private static String method(int num, int n){
 
         String returnString = "";
         while(num != 0){
@@ -38,7 +37,7 @@ public class P1 {
         }
 
         return returnString;
-    }
+    }*/
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);

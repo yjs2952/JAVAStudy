@@ -1,4 +1,4 @@
-package algorithmStudy.company.estsoft;
+package algorithmStudy.company.estsoft1;
 
 public class P3 {
 

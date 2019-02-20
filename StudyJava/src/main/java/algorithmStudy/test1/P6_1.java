@@ -23,7 +23,6 @@ public class P6_1 {
     private static String isSmooth(int[] arr) {
         for (int i = 1; i < arr.length; i++) {
             if ((arr[i] - arr[i - 1]) <= 1) {
-                continue;
             } else {
                 return "NO";
             }
