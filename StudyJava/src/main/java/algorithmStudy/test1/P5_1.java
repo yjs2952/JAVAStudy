@@ -49,4 +49,3 @@ public class P5_1 {
         solution(num1, num2, size1, size2);
     }
 }
-
