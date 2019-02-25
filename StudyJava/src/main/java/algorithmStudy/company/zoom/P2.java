@@ -18,8 +18,6 @@ public class P2 {
             return "IMPOSSIBLE";
         }
 
-
-
         return "";
     }
 

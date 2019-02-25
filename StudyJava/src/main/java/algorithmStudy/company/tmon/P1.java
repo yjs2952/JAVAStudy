@@ -10,7 +10,7 @@ public class P1 {
         if (q == 0)
             return String.valueOf(t.charAt(r));
         else
-            return method(q, n) + t.charAt(r);
+            return solution(q, n) + t.charAt(r);
     }
 
     private static String method(int num, int n){
@@ -40,9 +40,8 @@ public class P1 {
     }
 
     public static void main(String[] args) {
-        //Scanner sc = new Scanner(System.in);
-        //System.out.println(method(11, 2));
-        System.out.println((char) 65);
+        System.out.println(solution(1236126387, 16));
+        System.out.println(method(1236126387, 16));
 
     }
 }

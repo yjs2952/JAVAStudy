@@ -13,17 +13,18 @@ public class P3 {
         int index = 0;
         List<Integer> list = new ArrayList<>();
 
-        for (int i = 0; i < healths.length; i++) {
+        for (int health : healths) {
             int max = 0;
 
             for (int j = 0; j < items.length; j++) {
-                if (items[j]!= null && healths[i] - items[j][1] >= 100) {
+                if (items[j] != null && health - items[j][1] >= 100) {
                     if (items[j][0] > max) {
                         max = items[j][0];
                         index = j;
                     }
                 }
             }
+
             if (max != 0) {
                 list.add(index);
                 items[index] = null;

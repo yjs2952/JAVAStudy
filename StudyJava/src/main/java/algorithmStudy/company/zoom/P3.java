@@ -33,7 +33,7 @@ public class P3 {
                 }
             }
         }
-        up.append("," + low.toString());
+        up.append(",").append(low.toString());
         return up.toString();
     }
 
