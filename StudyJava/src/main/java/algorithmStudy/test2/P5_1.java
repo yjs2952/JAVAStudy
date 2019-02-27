@@ -20,8 +20,8 @@ public class P5_1 {
             }
             // '*'가 나오면 일단 pattern만 1 증가
             else if (p < pLength && pattern.charAt(p) == '*') {
-                asterisk = p;  // 현재 pattern 위치를 저장
-                sPrev = s;
+                asterisk = p;   // 현재 pattern 위치를 저장 (별의 위치)
+                sPrev = s;      // 별이 나왔을 때의 문자열의 위치 저장
                 p++;
             }
             // 직전에 '*'가 나왔으면 str을 증가

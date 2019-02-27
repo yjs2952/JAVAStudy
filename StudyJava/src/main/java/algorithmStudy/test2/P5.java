@@ -1,4 +1,3 @@
-/*
 package algorithmStudy.test2;
 
 import java.io.BufferedReader;
@@ -38,7 +37,16 @@ public class P5 {
 
     public static void main(String[] args) throws java.lang.Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String input = br.readLine();
-        System.out.println(solution(input));
+        int n = Integer.parseInt(br.readLine());
+        boolean[] arr = new boolean[n];
+
+        for (int i = 0; i < n; i++) {
+            String input = br.readLine();
+            arr[i] = solution(input);
+        }
+
+        for (int i = 0; i < n; i++) {
+            System.out.println(arr[i]);
+        }
     }
-}*/
+}

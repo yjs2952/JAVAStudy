@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 public class P4 {
     public static String solution(String input) {
-        String[] groups = input.split("\\]");
+        String[] groups = input.split("]");
         StringBuffer sb = new StringBuffer();
 
         for (String group : groups) {
