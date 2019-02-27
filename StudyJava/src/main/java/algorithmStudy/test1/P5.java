@@ -31,8 +31,10 @@ public class P5 {
             else
                 merge[k++] = arr2[q++];
         }
+
         while (p < n)
             merge[k++] = arr1[p++];
+
         while (q < m)
             merge[k++] = arr2[q++];
 

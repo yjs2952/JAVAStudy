@@ -43,6 +43,15 @@ public class Practice {
         return sb.toString();
     }
 
+    private static int countBits(int num) {
+        int count = 0;
+        while (num > 0) {
+            if (num % 2 == 1) count++;
+            num /= 2;
+        }
+        return count;
+    }
+
     public static void main(String[] args) {
         long start = System.nanoTime();
         System.out.println(solution(1236126387, 16));
@@ -54,5 +63,7 @@ public class Practice {
         System.out.println(method(1236126387, 16));
         end = System.nanoTime();
         System.out.println(end - start);
+
+        System.out.println(countBits(7));
     }
 }

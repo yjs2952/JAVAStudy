@@ -19,9 +19,7 @@ public class P3 {
             for (int j = 0; j < arr.length; j++) {
                 char ch = arr[j];
                 if (!((ch >= 48 && ch <= 57) || (ch >= 65 && ch <= 90) || (ch >= 97) && ch <= 122)) {
-                    if (!((arr[j + 1] >= 48 && arr[j + 1] <= 57) || (arr[j + 1] >= 65 && arr[j + 1] <= 90) || (arr[j + 1] >= 97) && arr[j + 1] <= 122)) {
-
-                    } else {
+                    if ((arr[j + 1] >= 48 && arr[j + 1] <= 57) || (arr[j + 1] >= 65 && arr[j + 1] <= 90) || (arr[j + 1] >= 97) && arr[j + 1] <= 122) {
                         sb.append(" ");
                     }
                 } else {
