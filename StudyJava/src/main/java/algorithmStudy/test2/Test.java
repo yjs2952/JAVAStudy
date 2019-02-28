@@ -122,27 +122,29 @@ public class Test {
     private static String solution5(String str, String pattern) {
         int s = 0;
         int p = 0;
-        int aster = -1;
-        int prevS = 0;
+        int asterP = -1;
+        int asterS = 0;
         int pLength = pattern.length();
 
         while (s < str.length()) {
-            if (p < pLength && (str.charAt(s) == pattern.charAt(p) || pattern.charAt(p) == '?')) {
+
+            if (p < pLength &&
+                    (str.charAt(s) == pattern.charAt(p) || pattern.charAt(p) == '?')) {
                 s++;
                 p++;
             } else if (p < pLength && pattern.charAt(p) == '*') {
-                aster = p;
-                prevS = s;
+                asterP = p;
+                asterS = s;
                 p++;
-            } else if (aster != -1) {
-                p = aster + 1;
-                s = ++prevS;
+            } else if (asterP != -1) {
+                s = ++asterS;
+                p = asterP + 1;
             } else {
                 return "False";
             }
         }
 
-        while (p < pLength && pattern.charAt(p) == '*') {
+        while (p < pLength && (pattern.charAt(p) == '*' || pattern.charAt(p) == '?')) {
             p++;
         }
 
@@ -150,15 +152,15 @@ public class Test {
     }
 
     private static void p5(BufferedReader br) throws IOException {
-        int n = Integer.parseInt(br.readLine().trim());
-        String[][] strArr = new String[n][2];
+        int n = Integer.parseInt(br.readLine());
+        String[][] arr = new String[n][2];
 
         for (int i = 0; i < n; i++) {
-            strArr[i] = br.readLine().split(" ");
+            arr[i] = br.readLine().split(" ");
         }
 
         for (int i = 0; i < n; i++) {
-            System.out.println(solution5(strArr[i][0], strArr[i][1]));
+            System.out.println(solution5(arr[i][0], arr[i][1]));
         }
     }
 
