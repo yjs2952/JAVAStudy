@@ -7,4 +7,4 @@
 + 알고리즘
   + 탑코더
   + 백준
-  + leetcode
+  + leetcode!
