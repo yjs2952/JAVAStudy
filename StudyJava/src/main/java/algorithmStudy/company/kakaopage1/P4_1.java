@@ -1,4 +1,4 @@
-package algorithmStudy.test1;
+package algorithmStudy.company.kakaopage1;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
