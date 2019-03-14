@@ -1,4 +1,4 @@
-package algorithmStudy.company.kakaopage2;
+package algorithmStudy.company.kakaopage.p2;
 
 import java.io.BufferedReader;
 import java.io.IOException;
